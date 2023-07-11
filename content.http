@@ -1,0 +1,48 @@
+### Get All Content
+GET http://localhost:8080/departments
+
+### Get Content By Id
+GET http://localhost:8080/departments/1
+
+### Create Content
+POST http://localhost:8080/departments
+Content-Type: application/json
+
+{
+  "departmentId": 1,
+  "departmentName": "IT",
+  "departmentAddress": "Pune",
+  "departmentCode": "IT-06"
+}
+
+### Update Content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "MY FIRST POST!!",
+  "description": "MY FIRST POST!!",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-07-11T10:33:41.971340",
+  "dateUpdated":  null,
+  "url": ""
+}
+
+### Update Content with Invalid Id
+PUT http://localhost:8080/api/content/99
+Content-Type: application/json
+
+{
+  "id": 99,
+  "title": "MY FIRST POST!!",
+  "description": "MY FIRST POST!!",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-07-11T10:33:41.971340",
+  "dateUpdated":  null,
+  "url": ""
+}
+
+### Delete Content by Id
+DELETE http://localhost:8080/api/content/1
+
